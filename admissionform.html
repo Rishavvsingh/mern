@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+</head>
+
+<body>
+    <h1>Student Admission Form</h1>
+    <form>
+
+        <label>Student Name</label>
+        <input type="text" requird minlength="3">
+
+        <br><br>
+        <label>Student Email</label>
+        <input type="email" required>
+
+        <br><br>
+        <label>Date of Birth</label>
+        <input type="date">
+        <br><br>
+
+        <label>Gender</label>
+        <input type="radio" name="Gender"> Male
+        <input type="radio" name="Gender"> Female
+        <br><br>
+        <label>select course</label>
+        <select>
+            <option>Select course</option>
+            <option>Mern stack</option>
+            <option>Flutter</option>
+            <option>Cloud Computing</option>
+            <option>Artifical Intelligence</option>
+        </select>
+        <br><br>
+        <label>Seclect College</label>
+        <input type="text" list="College">
+
+        <datalist id="College">
+            <option>NPGC</option>
+            <option>MUIT</option>
+            <option>SRMU</option>
+            <option>NPGC</option>
+        </Datalist>
+        <br><br>
+
+        <label for="Image">Upload Image</label>
+        <input hidden type="file" id="Image" accept="Image/*">
+        <br><br>
+
+        <input id="pqr" type="checkbox" requird>
+        <label for="pqr">accept terms and conditions</label>
+        <br>
+        <input type="checkbox">
+        <label for="news">Subscribe to Newsletter</label>
+        <br><br>
+        <datalist>
+            <summary>Terms & conditions</summary>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati minus, amet quisquam quasi optio
+                dolores pariatur. Laudantium, corporis facilis, explicabo soluta ad alias, vitae dolores odio quaerat
+                quasi nam numquam!
+        </datalist>
+
+        <br><br>
+
+        <button type="submit">submit</button>
+    </form>
+</body>
+
+</html>
