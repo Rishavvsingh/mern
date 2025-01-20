@@ -5,36 +5,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-    <header>
+<body class="">
 
-
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full"
+                    viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                </svg>
+                <span class="ml-3 text-xl">Tailblocks</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a class="mr-5 hover:text-gray-900">First Link</a>
+                <a class="mr-5 hover:text-gray-900">Second Link</a>
+                <a class="mr-5 hover:text-gray-900">Third Link</a>
+                <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+            </nav>
+            <button
+                class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
     </header>
+
     <main>
 
         <article>
-
-            <section class="bg-blue-200 h-[70vh]">
-                <div class=" max-w-[80%] mx-auto h-full py-8 md:py-0">
+            <section class="bg-blue-200 min-h-[60vh]">
+                <div class="max-w-[80%] mx-auto h-full py-8 md:py-0">
                     <div class="grid grid-cols-1 md:grid-cols-2 h-full">
-                        <div class="space py-4 my-auto text-center md:text-left">
+
+                        <div class="space-y-4 my-auto text-center md:text-left">
                             <h1 class="text-4xl font-bold">My Website Title</h1>
-                            <p class="text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure dicta
-                                deleniti error quidem iste reiciendis itaque id. Alias, rerum sint.
-                            </p>
+                            <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                                voluptates voluptatibus,
+                                odit quisquam id voluptate ex dolor sequi beatae maxime.</p>
 
                             <div class="flex gap-4 justify-center md:justify-start">
-                                <button class="px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Primary</button>
                                 <button
-                                    class="px-3 py-2 border border-blue-500 text-blue-500 rouneded">Secondary</button>
-                                </div>
-                        </div>
-                        <div class="my-auto order-first md:order-last">
-                            <img src="https://cdni.iconscout.com/illustration/premium/thumb/male-web-developer-doing-research-on-development-illustration-download-in-svg-png-gif-file-formats--thinking-researching-and-pack-design-illustrations-4759504.png"
-                                alt="image">
+                                    class="px-3 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">Primary</button>
+                                <button
+                                    class="px-3 py-2 border border-blue-500 text-blue-500 rounded">Secondary</button>
+                            </div>
 
+                        </div>
+
+                        <div class="my-auto order-first md:order-last">
+                            <img class="block mx-auto"
+                                src="https://cdn3d.iconscout.com/3d/premium/thumb/dashboard-design-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--developer-building-website-development-pack-illustrations-4971242.png?f=webp"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+
+        <article>
+
+            <section>
+                <div class="md:max-w-[80%] mx-auto">
+                    <h2 class="text-center my-8 text-3xl font-bold">Our Features</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center py-6 px-8 rounded-lg shadow-lg">
+                            <i class="fa-solid fa-rocket fa-4x"></i>
+                            <h3 class="text-2xl font-bold my-3">Feature 1</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum alias, explicabo quam
+                                facilis excepturi autem ad nisi pariatur ipsam dicta repellendus quisquam cum unde quasi
+                                nostrum vitae libero repudiandae aspernatur.</p>
+                            <button class="bg-violet-500 px-3 py-1 rounded text-white mt-3 w-full">More Info</button>
+                        </div>
+                        <div class="text-center py-6 px-8 rounded-lg shadow-lg">
+                            <i class="fa-solid fa-rocket fa-4x"></i>
+                            <h3 class="text-2xl font-bold my-3">Feature 1</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum alias, explicabo quam
+                                facilis excepturi autem ad nisi pariatur ipsam dicta repellendus quisquam cum unde quasi
+                                nostrum vitae libero repudiandae aspernatur.</p>
+                            <button class="bg-violet-500 px-3 py-1 rounded text-white mt-3 w-full">More Info</button>
+                        </div>
+                        <div class="text-center py-6 px-8 rounded-lg shadow-lg">
+                            <i class="fa-solid fa-rocket fa-4x"></i>
+                            <h3 class="text-2xl font-bold my-3">Feature 1</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum alias, explicabo quam
+                                facilis excepturi autem ad nisi pariatur ipsam dicta repellendus quisquam cum unde quasi
+                                nostrum vitae libero repudiandae aspernatur.</p>
+                            <button class="bg-violet-500 px-3 py-1 rounded text-white mt-3 w-full">More Info</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="md:max-w-[80%] mx-auto">
+                    <h3 class="text-center text-3xl font-bold my-8">Our Services</h3>
+
+                    <div class="grid grid-cols-12">
+                        <div class="col-span-12 md:col-span-4">
+                            <img src="service1.png" alt="">
+                        </div>
+                        <div class="col-span-12 md:col-span-8 p-6 space-y-4">
+                            <h3 class="text-3xl font-bold">Service Title 1</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ipsum tenetur placeat
+                                ipsam optio impedit assumenda debitis quis vitae rerum perspiciatis quo eveniet
+                                cupiditate neque, obcaecati perferendis? Iste, quae rem.</p>
+                            <ul>
+                                <li><i class="fa-solid fa-caret-right"></i> Item 1</li>
+                                <li><i class="fa-solid fa-caret-right"></i> Item 2</li>
+                                <li><i class="fa-solid fa-caret-right"></i> Item 3</li>
+                            </ul>
+                            <button class="border-2 border-cyan-500 px-3 py-1 rounded-lg text-cyan-500">Explore</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12">
+                        <div class="col-span-12 md:col-span-4 md:order-last">
+                            <img src="service1.png" alt="">
+                        </div>
+                        <div class="col-span-12 md:col-span-8 p-6 space-y-4">
+                            <h3 class="text-3xl font-bold">Service Title 2</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ipsum tenetur placeat
+                                ipsam optio impedit assumenda debitis quis vitae rerum perspiciatis quo eveniet
+                                cupiditate neque, obcaecati perferendis? Iste, quae rem.</p>
+                            <ul>
+                                <li><i class="fa-solid fa-caret-right"></i> Item 1</li>
+                                <li><i class="fa-solid fa-caret-right"></i> Item 2</li>
+                                <li><i class="fa-solid fa-caret-right"></i> Item 3</li>
+                            </ul>
+                            <button class="border-2 border-cyan-500 px-3 py-1 rounded-lg text-cyan-500">Explore</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12">
+                        <div class="col-span-12 md:col-span-4">
+                            <img src="service1.png" alt="">
+                        </div>
+                        <div class="col-span-12 md:col-span-8 p-6 space-y-4">
+                            <h3 class="text-3xl font-bold">Service Title 3</h3>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod ipsum tenetur placeat
+                                ipsam optio impedit assumenda debitis quis vitae rerum perspiciatis quo eveniet
+                                cupiditate neque, obcaecati perferendis? Iste, quae rem.</p>
+                            <ul>
+                                <li><i class="fa-solid fa-caret-right"></i> Item 1</li>
+                                <li><i class="fa-solid fa-caret-right"></i> Item 2</li>
+                                <li><i class="fa-solid fa-caret-right"></i> Item 3</li>
+                            </ul>
+                            <button class="border-2 border-cyan-500 px-3 py-1 rounded-lg text-cyan-500">Explore</button>
                         </div>
                     </div>
 
@@ -43,16 +167,109 @@
 
         </article>
 
+        <article>
+            <section>
+                <!-- contact section here -->
+            </section>
+        </article>
 
     </main>
 
     <footer>
+        <div class="flex justify-between p-6 bg-violet-500 text-white">
+            <p>Get connected us on social networks</p>
+            <div class="flex gap-x-4">
+                <a href="" class="hover:text-red-300">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-google"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+        <div class="bg-slate-800 text-white py-6">
+            <div class="max-w-[90%] md:max-w-[80%] mx-auto grid gap-8 grid-cols-12">
+                <div class="col-span-4">
+                    <h2 class="text-xl font-bold">Company Name</h2>
+                    <p>All rights reserved &copy; 2025</p>
+                    <p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis ipsum aliquam autem
+                        commodi.
+                        Nostrum, praesentium libero saepe similique hic corrupti!</p>
+                </div>
+                <div class="col-span-2">
+                    <h4 class="text-lg font-bold">Important Links</h4>
+                    <ul class="mt-4 space-y-3">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Browse Products</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-span-2">
+                    <h4 class="text-lg font-bold">Important Links</h4>
+                    <ul class="mt-4 space-y-3">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Browse Products</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
 
+                <div class="col-span-4">
+                    <h4 class="text-lg font-bold">Contact Us Here</h4>
+                    <ul class="mt-4 space-y-3">
+                        <li class="flex gap-2 items-center">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>LGF Rajaramkumar Plaza, Hazratganj, Lko</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>abcd@mail.com</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>+91 9140491739</p>
+                        </li>
+                        <li class="flex gap-2 items-center">
+                            <i class="fa-solid fa-headset"></i>
+                            <p>1800 652 8673</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
 
+        </div>
     </footer>
-    <div>
-
-    </div>
 
 
 </body>
