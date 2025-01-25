@@ -1,7 +1,122 @@
-.my-btn2{
-    background-color: brown;
-    border-radius: 5px;
-    padding: 10px 5px;
-    color: black;
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #111;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #444;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Featured Section */
+.featured {
+    background-image: url('https://via.placeholder.com/1920x800');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.featured h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.featured p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.featured .btn {
+    padding: 12px 30px;
+    background-color: #ffcc00;
+    border: none;
+    font-size: 1.2rem;
+    color: #111;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.featured .btn:hover {
+    background-color: #e6b800;
+}
+
+/* Video Grid Section */
+.video-grid {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.video-grid h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.video-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.video-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    color: #888;
+    border-top: 2px solid #444;
 }
