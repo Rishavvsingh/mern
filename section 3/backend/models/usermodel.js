@@ -10,8 +10,3 @@ const mySchema = new Schema({
 
 module.exports = model('users', mySchema);
 
-// title : String
-// price : Number
-// description : String
-// category : String
-// image : String
