@@ -1,6 +1,8 @@
 'use client'
+import axios from 'axios';
 import { useFormik } from 'formik';
 import React from 'react';
+import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 
 const SignupSchema = Yup.object().shape({
@@ -31,8 +33,18 @@ const Signup = () => {
     onSubmit: (value) => {
       console.log(value);
 
+
       // send values to backend
-    },
+     axios.post('http://localhost:5000/user/add', value)
+     .then((result) => {
+      toast.success('user registered successfully')
+     }).catch((err) => {
+      console.log(err);
+      toast.error('something went wrong')
+    });
+
+
+  },
     validationSchema: SignupSchema
   })
 
