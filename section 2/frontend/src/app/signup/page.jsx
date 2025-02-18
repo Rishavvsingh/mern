@@ -1,6 +1,8 @@
 'use client'
+import { IconLoader3, IconSend2 } from '@tabler/icons-react';
 import axios from 'axios';
 import { useFormik } from 'formik';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 import toast from 'react-hot-toast';
 import * as Yup from 'yup';
@@ -22,6 +24,7 @@ const SignupSchema = Yup.object().shape({
 
 const Signup = () => {
 
+  const router = useRouter();
   // initializing formik
   const signupForm = useFormik({
     initialValues: {
@@ -30,17 +33,21 @@ const Signup = () => {
       password: '',
       confirmPassword: ''
     },
-    onSubmit: (value) => {
+    onSubmit: (value, { resetForm, setSubmitting}) => {
       console.log(value);
 
 
       // send values to backend
+      // sending request to backend
      axios.post('http://localhost:5000/user/add', value)
      .then((result) => {
       toast.success('user registered successfully')
+      resetForm();
+      router.push('/login');
      }).catch((err) => {
       console.log(err);
-      toast.error('something went wrong')
+      toast.error('something went wrong');
+      setSubmitting(false);
     });
 
 
@@ -292,9 +299,14 @@ const Signup = () => {
                 </div>
                 {/* End Checkbox */}
                 <button
-                  type="submit"
+                disabled={signupForm.isSubmitting}
+                 type="submit"
                   className="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
                 >
+                  {
+                    signupForm.isSubmitting ? <IconLoader3 className='animate-spin' /> : 
+                   <IconSend2 />
+                  }
                   Sign up
                 </button>
               </div>
