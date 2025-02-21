@@ -1,6 +1,7 @@
 'use client';
-import { IconTrash } from '@tabler/icons-react';
+import { IconPencil, IconTrash } from '@tabler/icons-react';
 import axios from 'axios'
+import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
 
@@ -43,7 +44,7 @@ const ManageUser = () => {
                             <th>Email</th>
                             <th>City</th>
                             <th>Date</th>
-                            <th>Actions</th>
+                            <th colSpan={2}>Actions</th>
                         </tr>
                     </thead>
                     <tbody className='text-center'>
@@ -57,11 +58,21 @@ const ManageUser = () => {
                                     <td className='p-3'>{user.email}</td>
                                     <td className='p-3'>{user.city}</td>
                                     <td className='p-3'>{new Date(user.createdAt).toLocaleDateString()}</td>
+
                                     <td>
-                                        <button onClick={() => { deleteUser(user._id) }} className='rounded bg-red-500 text-white px-3 py-1'>
+                                        <button onClick={() => { deleteUser(user._id) }}
+                                            className='rounded bg-red-500 text-white px-3 py-1'>
                                             <IconTrash />
                                         </button>
                                     </td>
+
+                                    <td>
+                                        <Link href={`/update-user/${user._id}`}
+                                            className='block w-fit mx-auto rounded bg-blue-500 text-white px-3 py-1'>
+                                            <IconPencil />
+                                        </Link>
+                                    </td>
+
                                 </tr>
                             })
                         }
